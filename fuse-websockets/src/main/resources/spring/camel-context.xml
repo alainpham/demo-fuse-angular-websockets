@@ -4,7 +4,7 @@
 	xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 	<!-- Define a traditional camel context here -->
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-	<endpoint id="wsrec" uri="websocket://channel?port=9292&amp;staticResources=classpath:static"/>
+	<endpoint id="wsrec" uri="websocket://channel?port=9292&amp;staticResources=classpath:/static"/>
 	<endpoint id="wssend" uri="websocket://channel?port=9292&amp;sendToAll=true&amp;staticResources=classpath:static"/>
 	
 		<route>
