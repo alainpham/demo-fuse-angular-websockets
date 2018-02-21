@@ -22,7 +22,7 @@ The angular app is already built and will be served statically by the fuse/sprin
     cd fuse-websockets
     mvn --settings configuration/settings.xml spring-boot:run
 
-Open your browser at http://localhost:8080/
+Open your browser at http://localhost:9292/
 
 ## If you want to customize and rebuild the angular app
 
