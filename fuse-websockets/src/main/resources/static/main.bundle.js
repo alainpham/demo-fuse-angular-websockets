@@ -279,8 +279,8 @@ var PurewsComponent = /** @class */ (function () {
         console.log('sending msg ' + this.tobeSentMsg);
     };
     PurewsComponent.prototype.ngOnInit = function () {
-        this.receiveSocket = new WebSocket('ws://localhost:9292/channel');
-        this.sendSocket = new WebSocket('ws://localhost:9292/channel');
+        this.receiveSocket = new WebSocket(((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/channel');
+        this.sendSocket = new WebSocket(((window.location.protocol === 'https:') ? 'wss://' : 'ws://') + window.location.host + '/channel');
         this.receiveSocket.onopen = function () { console.log('Starting getting event-bus messages ......'); };
         this.receiveSocket.onmessage = function (msg) {
             // Log message in the console
