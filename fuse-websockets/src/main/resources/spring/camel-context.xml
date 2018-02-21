@@ -5,7 +5,7 @@
 	<!-- Define a traditional camel context here -->
 	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
 	<endpoint id="wsrec" uri="websocket://channel?port=9292&amp;staticResources=classpath:/static"/>
-	<endpoint id="wssend" uri="websocket://channel?port=9292&amp;sendToAll=true&amp;staticResources=classpath:static"/>
+	<endpoint id="wssend" uri="websocket://channel?port=9292&amp;sendToAll=true&amp;staticResources=classpath:/static"/>
 	
 		<route>
 			<from uri="timer:test?period=150" />
